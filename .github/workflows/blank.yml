@@ -5,7 +5,7 @@ on:
      -main
      -develop
      -"release/**""
-pull_request :
+  pull_request :
     branches:
     - main
 jobs:
