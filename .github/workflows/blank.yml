@@ -5,9 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the code
-        uses: actions/checkout@v4 
-      - name: Print index.html file
-       run : cat index.html
+        uses: actions/checkout@v4
+      - name: print index.html file
+        run: cat index.html
+        
          
       
   
