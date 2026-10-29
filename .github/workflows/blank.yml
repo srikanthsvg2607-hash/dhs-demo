@@ -1,14 +1,12 @@
-name: GitHub Action Demo
+name: Context variables demo
 on: push
 jobs:
   action-demo:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the code
-        uses: actions/checkout@v4
-      - name: print index.html file
-        run: cat index.html
-        
-         
+      - name: Use contect variables
+        run: 
+        echo "This workflow is triggered by ${{github.actor }}"
+        echo "The repository name is ${{github.repository}}     
       
   
