@@ -1,12 +1,20 @@
-name: Context variables demo
-on: push
-jobs:
-  action-demo:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Use contect variables
-        run: 
-        echo " This workflow is triggered by ${{github.actor }}"
-        echo " The repository name is ${{github.repository}}"    
+name: Input Demo
+on: 
+ workflow_dispatch:
+   inputs:
+     environment :
+       description: choose the environment
+        required : true
+        default : dev
+  jobs:
+    inputs-demo:
+      runs-on: ubuntu-latest
+      steps :
+       - name: Deploy the App
+             run : echo "Deploying the application to {{inputs.environment }}"
       
+    
+      
+      
+        
   
