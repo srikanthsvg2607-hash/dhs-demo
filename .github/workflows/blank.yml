@@ -1,5 +1,4 @@
 name: Input Demo
-
 on:
   workflow_dispatch:
     inputs:
